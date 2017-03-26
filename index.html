@@ -3,21 +3,49 @@
 
 <head>
     <meta charset="utf-8">
+    <title>Trumps DDay</title>
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/stylesheet.css">
-    <title></title>
 </head>
 
 <body>
     <header>
-      <h1>GAMEEEEEEEEEEEEEEEEEEEEE</h1>
+        <h1>TRUMP-INATOR!</h1>
+        <h2 id="timer">Press Enter to Start</h2>
     </header>
-    <section>
-
+    <main id="gameArea">
+        <div class="scoreContainer">
+            <h2 id="scoreDisplay1" class="scoreDisplay">Player 1</h2>
+            <h2 id="scoreDisplay2" class="scoreDisplay">Player 2</h2>
+        </div>
+        <div class="clickContainer">
+            <div id="trump1" class="clickBox">
+                <img src="" alt="">
+            </div>
+            <div id="trump2" class="clickBox">
+                <img src="" alt="">
+            </div>
+        </div>
+    </main>
+    <section id="winnerOne" class="winners">
+        <h2>Player 1 Wins! Boom Boom Pow!</h2>
+        <h3>Fingers don't hurt yet?</h3>
+        <button class="restart" type="button" name="Restart?">Click here</button>
     </section>
+    <section id="winnerTwo" class="winners">
+        <h2>Player 2 Wins! Boom Boom Pow!</h2>
+        <h3>Fingers don't hurt yet?</h3>
+        <button class="restart" type="button" name="Restart?">Click here</button>
+    </section>
+    <section id="draw" class="winners">
+        <h2>You sure you're 2 people? -.-</h2>
+        <h3>Fingers don't hurt yet?</h3>
+        <button class="restart" type="button" name="Restart?">Click here</button>
+    </section>
+
     <footer>
 
     </footer>
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script type="text/javascript" src="assets/js/script.js"></script>
 </body>
