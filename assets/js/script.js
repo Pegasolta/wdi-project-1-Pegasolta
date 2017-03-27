@@ -1,8 +1,6 @@
-// 2) Winning Screen for individual players
 // 3) Every 10 clicks spew a quote
 //  3a) Button click generates a number (index)
 //  3b) Number (index) is used to search array for quote to return
-// 4) Timeout after a certain timing, Game runs for 1minute
 //Optional
 // 5) Photo Upload Option
 // 6) Animation on touch / click
@@ -21,13 +19,13 @@ $(document).ready(function() {
     //Score Variables
     var score1 = 1
     var $display1 = $("#scoreDisplay1")
-    var $trump1 = $("#trump1")
+    var trump1 = document.getElementById("trump1")
     var score2 = 1
     var $display2 = $("#scoreDisplay2")
     var $trump2 = $("#trump2")
 
     //Timer Variables
-    var countdown = 60
+    var countdown = 100
     var gameStarted = false
     var timer = document.getElementById("timer")
 
@@ -49,6 +47,8 @@ $(document).ready(function() {
                     timer.textContent = "Time Left: " + countdown
                     clearInterval(interval)
                     gameArea.style.display = "none"
+
+            //Determining the Winner
                       if (score1 > score2) {
                         winnerOne.style.display = "block"
                     } else if (score1 < score2) {
@@ -57,6 +57,7 @@ $(document).ready(function() {
                 }
             }, 1000)
 
+            //Keydown listeners
             document.addEventListener("keydown", trumpKey1, false)
             document.addEventListener("keydown", trumpKey2, false)
 
@@ -64,6 +65,8 @@ $(document).ready(function() {
             function trumpKey1(t) {
                 $display1.text("Player 1 Score: " + score1)
                 if (t.keyCode === 65 && countdown > 0)
+                    // trump1.style.backgroundColor = "rgba(229, 56, 56, 0.5)"
+                    // console.log($trump1);
                     score1++
                     if (score1 % 5 === 0) {
                         //code for generating quote
@@ -85,8 +88,8 @@ $(document).ready(function() {
         }
 
         //Game Over
-          function restart () { 
-            startGame(13)
+          function restart () {
+            location.reload()
           }
         }
     })
