@@ -7,8 +7,8 @@
 //  6a) kapow animation
 //  6b) Trump picture changes animation
 //  6c) Mouse Cursor changes to punching gloves
-$(document).ready(function() {
-    console.log("loaded js");
+$(document).ready(function () {
+    console.log("loaded js")
 
     var gameArea = document.getElementById("gameArea")
     var winnerOne = document.getElementById("winnerOne")
@@ -17,15 +17,15 @@ $(document).ready(function() {
     var button = document.getElementsByClassName("restart")
 
     //Score Variables
-    var score1 = 1
+    var score1 = 0
     var $display1 = $("#scoreDisplay1")
     var trump1 = document.getElementById("trump1")
-    var score2 = 1
+    var score2 = 0
     var $display2 = $("#scoreDisplay2")
     var $trump2 = $("#trump2")
 
     //Timer Variables
-    var countdown = 100
+    var countdown = 5
     var gameStarted = false
     var timer = document.getElementById("timer")
 
@@ -34,6 +34,7 @@ $(document).ready(function() {
     document.addEventListener("click", restart, false)
 
     function startGame(e) {
+      console.log("run");
         if (e.keyCode === 13 && gameStarted === false) {
             //Game Starts
             gameStarted = true
@@ -48,8 +49,8 @@ $(document).ready(function() {
                     clearInterval(interval)
                     gameArea.style.display = "none"
 
-            //Determining the Winner
-                      if (score1 > score2) {
+                    //Determining the Winner
+                    if (score1 > score2) {
                         winnerOne.style.display = "block"
                     } else if (score1 < score2) {
                         winnerTwo.style.display = "block"
@@ -68,28 +69,27 @@ $(document).ready(function() {
                     // trump1.style.backgroundColor = "rgba(229, 56, 56, 0.5)"
                     // console.log($trump1);
                     score1++
-                    if (score1 % 5 === 0) {
-                        //code for generating quote
-                        var randomIndex = Math.floor(Math.random() * 20)
-
-                    }
-            }
-
-            function trumpKey2(t) {
-                $display2.text("Player 2 Score: " + score2)
-                if (t.keyCode === 76 && countdown > 0)
-                    score2++
-                    if (score2 % 5 === 0) {
-                        //code for generating quote
-                        var randomIndex = Math.floor(Math.random() * 20)
-
-                    }
+                    // if (score1 % 5 === 0) {
+                    //     //code for generating quote
+                    //     var randomIndex = Math.floor(Math.random() * 20)
+                    //}
             }
         }
 
-        //Game Over
-          function restart () {
-            location.reload()
-          }
+        function trumpKey2(t) {
+            $display2.text("Player 2 Score: " + score2)
+            if (t.keyCode === 76 && countdown > 0)
+                score2++
+                // if (score2 % 5 === 0) {
+                //     //code for generating quote
+                //     var randomIndex = Math.floor(Math.random() * 20)
+                // }
         }
-    })
+    }
+
+
+
+    function restart() {
+        location.reload()
+    }
+})
