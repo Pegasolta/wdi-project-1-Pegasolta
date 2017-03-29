@@ -11,6 +11,10 @@ h1 {
     text-align: center;
 }
 
+h2 {
+    text-align: center;
+}
+
 #gameArea {
     display: none;
 }
@@ -44,8 +48,8 @@ img {
 }
 
 #trump2 {
-  display: flex;
-  justify-content: flex-end;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .winners {

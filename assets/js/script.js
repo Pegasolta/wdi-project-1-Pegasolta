@@ -25,7 +25,7 @@ $(document).ready(function () {
     var $trump2 = $("#trump2")
 
     //Timer Variables
-    var countdown = 5
+    var countdown = 30
     var gameStarted = false
     var timer = document.getElementById("timer")
 
@@ -42,7 +42,7 @@ $(document).ready(function () {
 
             //Interval Function
             var interval = setInterval(function() {
-                timer.textContent = "Time Left: " + countdown
+                timer.textContent = "Time Left: " + countdown + " seconds"
                 countdown--
                 if (countdown === 0) {
                     timer.textContent = "Time Left: " + countdown
