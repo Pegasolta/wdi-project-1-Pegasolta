@@ -1,7 +1,7 @@
 // 3) Every 10 clicks spew a quote
 //  3a) Button click generates a number (index)
 //  3b) Number (index) is used to search array for quote to return
-//Optional
+// Optional
 // 5) Photo Upload Option
 // 6) Animation on touch / click
 //  6a) kapow animation
