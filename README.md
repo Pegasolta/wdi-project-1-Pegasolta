@@ -1,6 +1,6 @@
 ## Synopsis
 
-This game was created during my WDI course with General Assembly. It is modelled after Google's Chrome Dinosaur game, substituted with a Llama and with reduced difficulty. The game is written in Javascript, HTML and CSS. 
+This game was created during my WDI course with General Assembly. It is modelled after Google's Chrome Dinosaur game, substituted with a Llama and with reduced difficulty to the extent it is in "God-Mode" easiness. The game is written in Javascript, HTML and CSS. 
 
 ## Instructions
 
@@ -13,6 +13,18 @@ Using spacebar on a keyboard, players will need to jump over obstacles in the fo
 ## API
 
 Query
+
+## Possible Improvements
+
+1) Background doesn't loop properly. Probably an issue with calculation of image vs screen sizes
+2) Llama has "God-mode", such that keydown enables it to fly. Implementing a setTimeOut will solve this
+3) Randomize size of obstacles. Obstacles are currently all the same
+4) Implement score system based on time passed, allowing player to log high score
+5) Copy start screen of Google Chrome's Dinosaur game, where only the Dinosaur is shown until first key is pressed
+6) Implement multi-layered backgrounds
+7) Implement different backgrounds - after running a certain distance, image fades out to another background. 
+8) Ability to shoot projectiles and destroy obstacles that are too tall to jump over
+9) And many more!
 
 ## Credits
 
