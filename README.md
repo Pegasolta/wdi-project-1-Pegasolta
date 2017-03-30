@@ -29,6 +29,10 @@ https://fonts.googleapis.com/css?family=Press+Start+2P
 
 Provided the fonts for my game
 
+https://github.com/shihaotan91/CharBurnChar/edit/master/README.md
+
+Shihao, for the README Template
+
 My Instructor @primaulia, TAs @yisheng90 and @sharona1610
 
  
